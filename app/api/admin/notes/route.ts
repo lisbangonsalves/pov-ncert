@@ -93,7 +93,7 @@ export async function POST(request: NextRequest) {
   getSupabaseAdmin()
     .from('push_subscriptions')
     .select('endpoint, p256dh, auth')
-    .then(({ data: subs }) => {
+    .then(({ data: subs }: { data: { endpoint: string; p256dh: string; auth: string }[] | null }) => {
       if (subs && subs.length > 0) {
         sendPushToAll(subs, { title: notifTitle, body: notifBody, url: notifUrl }).catch(() => {})
       }

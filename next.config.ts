@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
       canvas: './empty-module.js',
     },
   },
-  experimental: {
+  serverActions: {
     bodySizeLimit: '20mb',
   },
 };
