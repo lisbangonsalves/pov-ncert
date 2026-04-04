@@ -10,7 +10,6 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // In production, send to an API endpoint
     setSubmitted(true)
   }
 
@@ -20,7 +19,7 @@ export default function ContactPage() {
       <main className="flex-1 max-w-2xl mx-auto px-4 py-12 w-full">
         <h1 className="text-3xl font-bold text-[#1a2e00] mb-2">Contact Us</h1>
         <p className="text-[#3b6d11] mb-8">
-          Have a question or facing an issue? We&apos;re here to help.
+          Have a question or need help? We&apos;re here to help.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -39,9 +38,7 @@ export default function ContactPage() {
                 className="bg-white border border-[#d6e8a0] rounded-2xl p-6 space-y-4"
               >
                 <div>
-                  <label className="block text-sm font-medium text-[#1a2e00] mb-1">
-                    Name
-                  </label>
+                  <label className="block text-sm font-medium text-[#1a2e00] mb-1">Name</label>
                   <input
                     type="text"
                     required
@@ -52,9 +49,7 @@ export default function ContactPage() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-[#1a2e00] mb-1">
-                    Email
-                  </label>
+                  <label className="block text-sm font-medium text-[#1a2e00] mb-1">Email</label>
                   <input
                     type="email"
                     required
@@ -65,9 +60,7 @@ export default function ContactPage() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-[#1a2e00] mb-1">
-                    Message
-                  </label>
+                  <label className="block text-sm font-medium text-[#1a2e00] mb-1">Message</label>
                   <textarea
                     required
                     rows={5}
@@ -90,7 +83,21 @@ export default function ContactPage() {
           <div className="space-y-4">
             <div className="bg-white border border-[#d6e8a0] rounded-xl p-4">
               <p className="text-xs text-[#3b6d11] font-medium mb-1">Email</p>
-              <p className="text-sm text-[#1a2e00] font-semibold">support@povncert.in</p>
+              <a href="mailto:neetmcqs@gmail.com" className="text-sm text-[#1a2e00] font-semibold hover:underline">
+                neetmcqs@gmail.com
+              </a>
+            </div>
+            <div className="bg-white border border-[#d6e8a0] rounded-xl p-4">
+              <p className="text-xs text-[#3b6d11] font-medium mb-1">WhatsApp</p>
+              <a href="https://wa.me/995568081337" className="text-sm text-[#1a2e00] font-semibold hover:underline">
+                +995 568 081 337
+              </a>
+            </div>
+            <div className="bg-white border border-[#d6e8a0] rounded-xl p-4">
+              <p className="text-xs text-[#3b6d11] font-medium mb-1">Instagram</p>
+              <a href="https://www.instagram.com/neetmcqs/" target="_blank" rel="noopener noreferrer" className="text-sm text-[#1a2e00] font-semibold hover:underline">
+                @neetmcqs
+              </a>
             </div>
             <div className="bg-white border border-[#d6e8a0] rounded-xl p-4">
               <p className="text-xs text-[#3b6d11] font-medium mb-1">Response Time</p>

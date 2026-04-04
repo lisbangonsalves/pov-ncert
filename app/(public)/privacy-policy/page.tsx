@@ -9,44 +9,38 @@ export default function PrivacyPolicy() {
       <Navbar />
       <main className="flex-1 max-w-3xl mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold text-[#1a2e00] mb-2">Privacy Policy</h1>
-        <p className="text-sm text-[#3b6d11] mb-8">Last updated: March 2025</p>
+        <p className="text-sm text-[#3b6d11] mb-8">Effective Date: 30 March 2026</p>
+
+        <p className="text-[#3b6d11] leading-relaxed mb-8">
+          POV NCERT (&ldquo;we&rdquo;, &ldquo;our&rdquo;, &ldquo;us&rdquo;) respects your privacy and is committed to protecting your
+          personal information. This Privacy Policy explains how we collect, use, and safeguard your data.
+        </p>
 
         <div className="space-y-6 text-[#1a2e00]">
           {[
             {
               title: '1. Information We Collect',
-              content:
-                'We collect information you provide directly to us, such as your name, email address, and payment information when you register and purchase our notes. We also collect usage data such as pages viewed and time spent on the platform.',
+              content: 'Account Information: Name, email, login credentials. Payment Information: All payments are securely processed via Razorpay. We do not store card details. Usage Data: Chapters accessed, features used, and other interactions to improve our services.',
             },
             {
               title: '2. How We Use Your Information',
-              content:
-                'We use your information to provide, maintain, and improve our services, process transactions, send you technical notices and support messages, and respond to your comments and questions. We may use your email to send updates about new notes or features.',
+              content: 'To provide access to POV NCERT chapters and features. To send updates, notifications, and promotional material about free chapters, new content, or offers. To improve our website and app for a better learning experience.',
             },
             {
-              title: '3. Data Security',
-              content:
-                'We implement appropriate technical and organizational measures to protect your personal information. Your PDF notes are served via signed, time-limited URLs and are never exposed as direct download links. All notes are watermarked with your email address.',
+              title: '3. Sharing of Information',
+              content: 'Your data will not be shared with third parties, except as required to process payments via Razorpay or as required by law.',
             },
             {
-              title: '4. Third-Party Services',
-              content:
-                'We use Razorpay for payment processing, which is governed by their own privacy policy. We use Supabase for data storage, which complies with GDPR and other applicable data protection laws.',
+              title: '4. Security',
+              content: 'We use encrypted connections (HTTPS) and other reasonable measures to protect your information. Do not share your login credentials. Attempting to share content may lead to account deletion.',
             },
             {
-              title: '5. Data Retention',
-              content:
-                'We retain your account information for as long as your account is active. You may request deletion of your account and associated data by contacting us.',
+              title: '5. Cookies & Analytics',
+              content: 'We may use cookies or similar tools to analyze site usage, improve performance, and personalize your experience.',
             },
             {
-              title: '6. Your Rights',
-              content:
-                'You have the right to access, correct, or delete your personal data. Contact us at the email provided on our contact page to exercise these rights.',
-            },
-            {
-              title: '7. Contact Us',
-              content:
-                'If you have any questions about this Privacy Policy, please contact us through our Contact page.',
+              title: '6. Contact',
+              content: 'For any privacy-related questions, contact: Email: neetmcqs@gmail.com',
             },
           ].map((section) => (
             <section key={section.title}>

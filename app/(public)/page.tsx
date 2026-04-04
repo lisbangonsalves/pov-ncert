@@ -11,34 +11,74 @@ export const metadata = {
 
 const features = [
   {
-    icon: '🩺',
-    title: 'Written by an MBBS Student',
-    desc: 'Notes crafted from first-hand NEET experience — not textbook summaries.',
+    icon: '📝',
+    title: 'Bullet-point format',
+    desc: 'No long boring paragraphs — every concept broken down into clean, scannable points.',
   },
   {
-    icon: '📚',
-    title: 'Chapter-wise Structure',
-    desc: 'Every chapter organized clearly so you study exactly what you need.',
+    icon: '📖',
+    title: 'Full NCERT Coverage',
+    desc: 'Covers the entire old (unrevised) NCERT with all NEET-relevant topics included.',
   },
   {
-    icon: '🆓',
-    title: 'Free Content',
-    desc: 'A curated set of chapters are completely free — no strings attached.',
+    icon: '📅',
+    title: '38 Years of PYQs Marked',
+    desc: 'Every NEET Previous Year Question tagged with [Year] right inside the notes.',
+  },
+  {
+    icon: '✏️',
+    title: 'NCERT & Exemplar Tagged',
+    desc: 'All NCERT Exercise questions tagged [NCERT] and Exemplar questions tagged [Exemplar].',
+  },
+  {
+    icon: '❓',
+    title: 'Potential Questions Marked',
+    desc: 'Likely NEET questions marked [Q] and Assertion-Reason questions marked [AR].',
+  },
+  {
+    icon: '🔵',
+    title: 'High-Yield Extra Points',
+    desc: 'Out-of-NCERT high-yield points from PYQs highlighted in blue for extra edge.',
   },
   {
     icon: '🔒',
-    title: 'Secure PDF Viewer',
-    desc: 'Notes open in a secure viewer. No downloads, no sharing — your access only.',
+    title: 'Bold & Grey Highlights',
+    desc: 'Important points in bold for fast revision. Less important points in grey.',
   },
   {
-    icon: '📱',
-    title: 'Read Anywhere',
-    desc: 'Access your notes from any device — phone, tablet, or laptop.',
+    icon: '🔗',
+    title: 'Cross-chapter References',
+    desc: 'Reference links connecting related topics across chapters for integrated understanding.',
   },
   {
-    icon: '💳',
-    title: 'One-Time Payment',
-    desc: 'Pay once for NEET Biology and get lifetime access. No subscriptions.',
+    icon: '📄',
+    title: 'Fewer Pages than NCERT',
+    desc: 'More content, less fluff — covers everything in fewer pages than the original.',
+  },
+  {
+    icon: '🧪',
+    title: '10 Practice Questions',
+    desc: 'Each chapter ends with 10 PYQ and fact-based practice questions.',
+  },
+  {
+    icon: '🏆',
+    title: "Topper's POV Section",
+    desc: 'Extra high-yield facts added in a dedicated Topper\'s POV section per chapter.',
+  },
+  {
+    icon: '📊',
+    title: 'Smart Tables',
+    desc: 'Quick-comparison tables added for easy recall of related concepts.',
+  },
+  {
+    icon: '🖼️',
+    title: 'New Labeled Diagrams',
+    desc: 'Important diagrams with proper labeling added wherever needed.',
+  },
+  {
+    icon: '🧠',
+    title: 'Mnemonics Included',
+    desc: 'Easy-to-remember mnemonics included in every chapter for faster recall.',
   },
 ]
 
@@ -68,20 +108,48 @@ const reviews = [
 
 const faqs = [
   {
-    q: 'Are Class 11 and Class 12 notes really free?',
-    a: 'Yes, completely free. Just create an account and you can access all Class 11 and Class 12 Biology chapters at no cost.',
+    q: 'Who is POV NCERT for?',
+    a: 'POV NCERT is ideal for NEET UG aspirants, whether you\'re reading for the first time or revising for faster retention. It is also useful for NEET educators as a reference for teaching.',
   },
   {
-    q: 'What is included in the NEET pack?',
-    a: 'The NEET pack includes all NEET-specific Biology chapters with exam-focused notes, high-yield topics highlighted, and mnemonics and shortcuts used in actual NEET preparation.',
+    q: 'Can I use POV NCERT if I\'m reading the chapter for the first time?',
+    a: 'Yes. It is suitable for first-time readers and designed to make concepts clear and easy to understand.',
   },
   {
-    q: 'Can I download the PDFs?',
-    a: 'No. To protect the content, all notes are viewed in a secure, watermarked in-browser viewer. Downloads are disabled to ensure the content stays exclusive to paying users.',
+    q: 'Do I still need to read NCERT if I use POV NCERT?',
+    a: 'No. POV NCERT covers 100% of NCERT along with extra points relevant for NEET.',
   },
   {
-    q: 'What happens to my access if I switch devices?',
-    a: 'Your account works on any device. Just log in with your email and password and all your notes will be available instantly.',
+    q: 'Is POV NCERT enough for NEET?',
+    a: 'Yes. It is enough for theory. For best results, focus on practicing MCQs after studying it.',
+  },
+  {
+    q: 'I already have NCERT. Why should I use this?',
+    a: 'POV NCERT helps you see exactly what matters for NEET, reduces unnecessary reading time, and connects concepts with PYQs so you revise smarter, not harder.',
+  },
+  {
+    q: 'I keep forgetting what I study. Will this help?',
+    a: 'Yes. Its bullet points, mnemonics, bold highlights, and smart tables make revision easier and improve retention.',
+  },
+  {
+    q: 'Is this useful if I am starting late for NEET?',
+    a: 'Yes. It is especially useful if you are short on time. Each chapter can be completed in 2–3 hours, after which you don\'t need to read any other theory book.',
+  },
+  {
+    q: 'I am already following coaching material. Do I still need this?',
+    a: 'Coaching material is often bulky. POV NCERT helps you come back to NCERT in a simplified way and focus on what actually matters for NEET.',
+  },
+  {
+    q: 'Can I download or share the content?',
+    a: 'The content is accessible through your account only. To protect quality and fairness, sharing is restricted. Trying to share the content may result in your account being deleted.',
+  },
+  {
+    q: 'What if I buy and don\'t find it useful?',
+    a: 'It\'s hard not to like it! You can try the free chapters first and see for yourself before unlocking full access.',
+  },
+  {
+    q: 'Why should I trust a new book over established ones?',
+    a: 'Most books are generic. POV NCERT is built with a clear goal: NEET-focused NCERT understanding, based on real student struggles. It is not trying to cover everything, only what matters.',
   },
 ]
 
@@ -121,17 +189,16 @@ export default function LandingPage() {
           </Link>
         </div>
 
-        {/* YouTube Placeholder */}
+        {/* YouTube Embed */}
         <div className="rounded-2xl overflow-hidden border-2 border-[#d6e8a0] shadow-xl max-w-2xl mx-auto">
-          <div className="relative bg-[#1a2e00] aspect-video flex items-center justify-center">
-            <div className="w-16 h-16 rounded-full bg-[#cde182] flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">
-              <svg className="w-7 h-7 text-[#1a2e00] ml-1" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z" />
-              </svg>
-            </div>
-            <p className="absolute bottom-4 text-[#e2ecb7] text-sm">
-              Watch: How POV:NCERT works
-            </p>
+          <div className="relative aspect-video">
+            <iframe
+              src="https://www.youtube.com/embed/wcAaRoQLGE8"
+              title="How POV:NCERT works"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full"
+            />
           </div>
         </div>
       </section>
@@ -145,7 +212,7 @@ export default function LandingPage() {
             </h2>
             <p className="text-[#3b6d11]">Built for NEET aspirants by someone who&apos;s been there.</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {features.map((f) => (
               <div
                 key={f.title}
@@ -158,6 +225,80 @@ export default function LandingPage() {
                 <p className="text-sm text-[#3b6d11] leading-relaxed">{f.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Sections / Chapters ── */}
+      <section className="bg-white py-20">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-[#1a2e00] mb-3">What&apos;s Inside</h2>
+            <p className="text-[#3b6d11]">All chapters from Class XI &amp; XII. Free chapters accessible instantly after signup.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Class XI */}
+            <div>
+              <h3 className="text-lg font-bold text-[#1a2e00] mb-4 pb-2 border-b border-[#d6e8a0]">Class XI</h3>
+              <ul className="space-y-2">
+                {[
+                  { name: 'The Living World', free: true },
+                  { name: 'Biological Classification', free: true },
+                  { name: 'Plant Kingdom', free: true },
+                  { name: 'Animal Kingdom', free: true },
+                  { name: 'Morphology of Flowering Plants', free: true },
+                  { name: 'Anatomy of Flowering Plants', free: true },
+                  { name: 'Structural Organisation in Animals', free: true },
+                  { name: 'Cell: The Unit of Life', free: true },
+                  { name: 'Biomolecules', free: true },
+                  { name: 'Cell Cycle and Cell Division', free: true },
+                  { name: 'Photosynthesis in Higher Plants', free: false },
+                  { name: 'Respiration in Plants', free: false },
+                  { name: 'Plant Growth and Development', free: false },
+                  { name: 'Breathing and Exchange of Gases', free: false },
+                  { name: 'Body Fluids and Circulation', free: false },
+                  { name: 'Excretory Products and Their Elimination', free: false },
+                  { name: 'Locomotion and Movement', free: false },
+                  { name: 'Neural Control and Coordination', free: false },
+                  { name: 'Chemical Coordination and Integration', free: false },
+                ].map((ch) => (
+                  <li key={ch.name} className="flex items-center justify-between text-sm py-1">
+                    <span className="text-[#1a2e00]">{ch.name}</span>
+                    {ch.free && (
+                      <span className="text-xs font-bold text-[#3b6d11] bg-[#e2ecb7] px-2 py-0.5 rounded-full">Free</span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            {/* Class XII */}
+            <div>
+              <h3 className="text-lg font-bold text-[#1a2e00] mb-4 pb-2 border-b border-[#d6e8a0]">Class XII</h3>
+              <ul className="space-y-2">
+                {[
+                  { name: 'Sexual Reproduction in Flowering Plants', free: false },
+                  { name: 'Human Reproduction', free: false },
+                  { name: 'Reproductive Health', free: false },
+                  { name: 'Principles of Inheritance and Variation', free: false },
+                  { name: 'Molecular Basis of Inheritance', free: false },
+                  { name: 'Evolution', free: false },
+                  { name: 'Human Health and Disease', free: true },
+                  { name: 'Microbes in Human Welfare', free: true },
+                  { name: 'Biotechnology: Principles and Processes', free: false },
+                  { name: 'Biotechnology and Its Applications', free: false },
+                  { name: 'Organisms and Populations', free: false },
+                  { name: 'Ecosystem', free: false },
+                  { name: 'Biodiversity and Its Conservation', free: false },
+                ].map((ch) => (
+                  <li key={ch.name} className="flex items-center justify-between text-sm py-1">
+                    <span className="text-[#1a2e00]">{ch.name}</span>
+                    {ch.free && (
+                      <span className="text-xs font-bold text-[#3b6d11] bg-[#e2ecb7] px-2 py-0.5 rounded-full">Free</span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>

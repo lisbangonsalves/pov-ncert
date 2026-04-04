@@ -18,6 +18,15 @@ export const metadata: Metadata = {
   description:
     "Chapter-wise NEET Biology notes by an MBBS student. Free for Class 11 & 12. One-time payment for NEET pack.",
   manifest: "/manifest.json",
+  icons: {
+    icon: [
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",

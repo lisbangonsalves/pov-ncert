@@ -8,50 +8,43 @@ export default function TermsAndConditions() {
     <div className="min-h-screen bg-[#f9fbf2] flex flex-col">
       <Navbar />
       <main className="flex-1 max-w-3xl mx-auto px-4 py-12">
-        <h1 className="text-3xl font-bold text-[#1a2e00] mb-2">Terms & Conditions</h1>
-        <p className="text-sm text-[#3b6d11] mb-8">Last updated: March 2025</p>
+        <h1 className="text-3xl font-bold text-[#1a2e00] mb-2">Terms &amp; Conditions</h1>
+        <p className="text-sm text-[#3b6d11] mb-4">Effective Date: 30 March 2026</p>
+        <p className="text-[#3b6d11] leading-relaxed mb-8">By using POV NCERT, you agree to the following terms:</p>
 
         <div className="space-y-6">
           {[
             {
-              title: '1. Acceptance of Terms',
-              content:
-                'By accessing or using POV:NCERT, you agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use our service.',
+              title: '1. Content Ownership',
+              content: 'All chapters, diagrams, mnemonics, and Topper\'s POV sections are owned by Yash Dhage. Users may not copy, distribute, or share content without permission. Violation may result in account deletion.',
             },
             {
-              title: '2. Use of Content',
-              content:
-                'All notes, PDFs, and content on POV:NCERT are protected by copyright. You may not reproduce, distribute, modify, or create derivative works without prior written consent. Notes are for personal, non-commercial use only.',
+              title: '2. Access & Payment',
+              content: 'Access to chapters is granted after successful payment via Razorpay. Payment is final, and unlocking content is tied to your account.',
             },
             {
-              title: '3. Account Responsibilities',
-              content:
-                'You are responsible for maintaining the confidentiality of your account credentials. You must not share your account with others. Sharing login credentials may result in immediate account suspension without refund.',
+              title: '3. User Accounts',
+              content: 'Users must register with valid email credentials. You are responsible for keeping your account secure.',
             },
             {
-              title: '4. Payment and Access',
-              content:
-                'NEET Biology notes require a one-time payment. Class 11 and Class 12 notes are provided free of charge. Paid access is granted to the registered user only and is non-transferable.',
+              title: '4. Refund Policy',
+              content: 'Refunds, if any, follow Razorpay\'s transaction policy. Contact support for assistance.',
             },
             {
-              title: '5. Prohibited Activities',
-              content:
-                'You may not attempt to bypass security measures, download or screen-record PDF content, share watermarked PDFs, use automated tools to access content, or engage in any activity that could harm other users or the platform.',
+              title: '5. Use of Website & App',
+              content: 'The website and app are for personal educational use only. Unauthorized sharing or misuse may lead to termination of account.',
             },
             {
-              title: '6. Termination',
-              content:
-                'We reserve the right to terminate or suspend your account at any time for violation of these terms, without prior notice. Account suspension does not entitle you to a refund.',
+              title: '6. Disclaimer',
+              content: 'POV NCERT is designed for NEET UG exam preparation. We do not guarantee exam results. Users should use the content at their own discretion.',
             },
             {
-              title: '7. Disclaimer',
-              content:
-                'POV:NCERT notes are educational resources to supplement your studies. We do not guarantee any specific results in your NEET examination. All academic outcomes depend on your individual effort and preparation.',
+              title: '7. Modifications',
+              content: 'We may update these Terms & Conditions from time to time. Updates will be posted on the website.',
             },
             {
-              title: '8. Governing Law',
-              content:
-                'These Terms shall be governed by the laws of India. Any disputes shall be subject to the exclusive jurisdiction of courts in India.',
+              title: '8. Contact',
+              content: 'For any questions about these Terms & Conditions, contact: Email: neetmcqs@gmail.com',
             },
           ].map((section) => (
             <section key={section.title}>
