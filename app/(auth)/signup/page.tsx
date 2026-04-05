@@ -69,8 +69,7 @@ export default function SignupPage() {
       return
     }
 
-    router.refresh()
-    router.push('/dashboard')
+    window.location.href = '/dashboard'
   }
 
   const resendOtp = async () => {
