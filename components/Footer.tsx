@@ -17,14 +17,12 @@ export default function Footer() {
                 className="w-12 h-12 rounded-full object-cover object-top border-2 border-[#3b6d11]"
               />
               <div>
-                <p className="font-bold">Yash Dhage</p>
+                <p className="font-bold">Yash Pradeep Dhage</p>
                 <p className="text-xs text-[#e2ecb7]">Creator, POV:NCERT</p>
               </div>
             </div>
             <p className="text-sm text-[#e2ecb7] leading-relaxed max-w-sm">
-              NEET aspirant turned MBBS student. I created POV:NCERT to share the
-              exact notes that helped me crack NEET — chapter-wise, concept-clear,
-              and exam-ready.
+              Yash Dhage is the creator of POV: NCERT and a NEET UG educator. He has reimagined NCERT into a more effective, exam-focused system designed to help students focus on what truly matters for NEET. Since 2020, he has helped thousands of NEET aspirants improve their understanding, revision efficiency, and overall preparation strategy.
             </p>
           </div>
 

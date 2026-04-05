@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Promo code usage limit reached' }, { status: 400 })
   }
 
-  const basePrice = 499
+  const basePrice = 599
   const discountedPrice =
     data.discount_type === 'percent'
       ? Math.round(basePrice * (1 - data.discount_value / 100))

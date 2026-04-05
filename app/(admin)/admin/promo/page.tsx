@@ -128,7 +128,7 @@ export default function AdminPromoPage() {
               <input
                 type="number"
                 min={1}
-                max={form.discount_type === 'percent' ? 100 : 499}
+                max={form.discount_type === 'percent' ? 100 : 599}
                 placeholder={form.discount_type === 'percent' ? '20' : '100'}
                 value={form.discount_value}
                 onChange={(e) => setForm({ ...form, discount_value: e.target.value })}
@@ -198,12 +198,12 @@ export default function AdminPromoPage() {
                         {c.discount_type === 'percent' ? `${c.discount_value}%` : `₹${c.discount_value}`} off
                         {c.discount_type === 'percent' && (
                           <span className="ml-1 text-xs text-[#3b6d11]">
-                            (→ ₹{Math.round(499 * (1 - c.discount_value / 100))})
+                            (→ ₹{Math.round(599 * (1 - c.discount_value / 100))})
                           </span>
                         )}
                         {c.discount_type === 'flat' && (
                           <span className="ml-1 text-xs text-[#3b6d11]">
-                            (→ ₹{Math.max(0, 499 - c.discount_value)})
+                            (→ ₹{Math.max(0, 599 - c.discount_value)})
                           </span>
                         )}
                       </td>

@@ -171,8 +171,9 @@ export default function LandingPage() {
           <span className="text-[#3b6d11]">Biology</span>
         </h1>
         <p className="text-lg text-[#3b6d11] mb-8 max-w-xl mx-auto">
-          Chapter-wise Biology notes written by an MBBS student. Free for Class 11 &amp; 12.
-          One-time payment for the full NEET pack.
+          Not the NCERT you want, but the NCERT you need!
+          <br />
+          Reimagined by Yash Dhage
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center mb-14">
           <Link
@@ -381,7 +382,7 @@ export default function LandingPage() {
             Get NEET Biology Notes
           </Link>
           <p className="text-sm text-[#3b6d11] mt-4">
-            One-time payment of ₹499 · Lifetime access
+            One-time payment of ₹599 · Lifetime access
           </p>
         </div>
       </section>

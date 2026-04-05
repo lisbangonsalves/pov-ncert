@@ -27,7 +27,7 @@ export default function PaymentPage() {
   const [promoError, setPromoError] = useState('')
   const [promoLoading, setPromoLoading] = useState(false)
 
-  const finalPrice = promoApplied ? promoApplied.final_price : 499
+  const finalPrice = promoApplied ? promoApplied.final_price : 599
 
   const loadRazorpayScript = (): Promise<boolean> =>
     new Promise((resolve) => {
@@ -188,7 +188,7 @@ export default function PaymentPage() {
               {promoApplied && (
                 <div className="flex items-center justify-between text-xs">
                   <span className="text-[#3b6d11]">Original price</span>
-                  <span className="line-through text-gray-400">₹499</span>
+                  <span className="line-through text-gray-400">₹599</span>
                 </div>
               )}
               {promoApplied && (
@@ -202,7 +202,7 @@ export default function PaymentPage() {
                   </span>
                   <span className="text-green-600 font-medium">
                     −{promoApplied.discount_type === 'percent'
-                      ? `₹${499 - promoApplied.final_price}`
+                      ? `₹${599 - promoApplied.final_price}`
                       : `₹${promoApplied.discount_value}`}
                   </span>
                 </div>

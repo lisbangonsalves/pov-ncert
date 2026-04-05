@@ -3,7 +3,7 @@ import { auth } from '@/lib/auth'
 import { razorpay } from '@/lib/razorpay'
 import { getSupabaseAdmin } from '@/lib/supabase'
 
-const BASE_PRICE_PAISE = 49900 // ₹499
+const BASE_PRICE_PAISE = 59900 // ₹599
 
 export async function POST(request: NextRequest) {
   const session = await auth()
@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
         const exhausted = promo.max_uses !== null && promo.uses_count >= promo.max_uses
 
         if (!expired && !exhausted) {
-          const basePrice = 499
+          const basePrice = 599
           const discountedRupees =
             promo.discount_type === 'percent'
               ? Math.round(basePrice * (1 - promo.discount_value / 100))

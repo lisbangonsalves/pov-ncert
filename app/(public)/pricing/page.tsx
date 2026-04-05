@@ -60,7 +60,7 @@ export default function PricingPage() {
             <h2 className="text-2xl font-bold text-white mb-1">Paid Content</h2>
             <p className="text-[#e2ecb7] text-sm mb-6">Exam-focused notes from an MBBS student</p>
             <div className="mb-6">
-              <span className="text-4xl font-bold text-[#cde182]">₹499</span>
+              <span className="text-4xl font-bold text-[#cde182]">₹599</span>
               <span className="text-[#e2ecb7] ml-2">one-time</span>
             </div>
             <ul className="space-y-3 mb-8">
