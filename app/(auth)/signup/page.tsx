@@ -64,8 +64,8 @@ export default function SignupPage() {
     setLoading(false)
 
     if (result?.error) {
-      setError('Verified! But login failed — please log in manually.')
-      router.push('/login')
+      setError(`Verified! But login failed (${result.error}) — please log in manually.`)
+      setLoading(false)
       return
     }
 
