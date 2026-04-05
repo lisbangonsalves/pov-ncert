@@ -12,7 +12,7 @@ declare global {
 }
 
 export default function PaymentPage() {
-  const { data: session } = useSession()
+  const { data: session, update } = useSession()
   const router = useRouter()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
@@ -120,6 +120,7 @@ export default function PaymentPage() {
         })
 
         if (verifyRes.ok) {
+          await update()
           router.push('/payment/success')
         } else {
           setError('Payment verification failed. Contact support if amount was deducted.')

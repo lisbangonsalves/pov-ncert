@@ -75,12 +75,23 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     }),
   ],
   callbacks: {
-    async jwt({ token, user }) {
+    async jwt({ token, user, trigger }) {
       if (user) {
         token.id = user.id
         token.role = (user as any).role
         token.has_paid = (user as any).has_paid
         token.is_blocked = (user as any).is_blocked
+      }
+      if (trigger === 'update' && token.id) {
+        const { data: dbUser } = await getSupabaseAdmin()
+          .from('users')
+          .select('has_paid, is_blocked')
+          .eq('id', token.id)
+          .single()
+        if (dbUser) {
+          token.has_paid = dbUser.has_paid
+          token.is_blocked = dbUser.is_blocked
+        }
       }
       return token
     },
