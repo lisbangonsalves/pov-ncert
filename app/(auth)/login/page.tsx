@@ -24,6 +24,7 @@ function LoginForm() {
       email: form.email,
       password: form.password,
       redirect: false,
+      callbackUrl: '/dashboard',
     })
 
     setLoading(false)
@@ -43,7 +44,7 @@ function LoginForm() {
       return
     }
 
-    window.location.href = '/dashboard'
+    router.push('/dashboard')
   }
 
   return (

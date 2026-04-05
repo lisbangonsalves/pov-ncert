@@ -59,17 +59,19 @@ export default function SignupPage() {
       email: form.email,
       password: form.password,
       redirect: false,
+      callbackUrl: '/dashboard',
     })
 
     setLoading(false)
 
     if (result?.error) {
       setError(`Verified! But login failed (${result.error}) — please log in manually.`)
-      setLoading(false)
       return
     }
 
-    window.location.href = '/dashboard'
+    if (result?.ok) {
+      router.push('/dashboard')
+    }
   }
 
   const resendOtp = async () => {
