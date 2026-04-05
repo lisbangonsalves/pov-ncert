@@ -47,7 +47,7 @@ export async function POST(request: NextRequest) {
     const order = await razorpay.orders.create({
       amount: finalAmountPaise,
       currency: 'INR',
-      receipt: `order_${userId}_${Date.now()}`,
+      receipt: `rcpt_${userId.slice(0, 8)}_${Date.now().toString().slice(-8)}`,
     })
 
     const supabase = getSupabaseAdmin()
