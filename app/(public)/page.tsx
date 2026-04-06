@@ -85,24 +85,24 @@ const features = [
 const reviews = [
   {
     quote:
-      'These notes are concise and exam-focused. I used them alongside my coaching and they made a huge difference in Biology.',
-    name: 'Sneha R.',
-    label: 'NEET 2024 — AIR 1240',
-    initials: 'SR',
+      'Bhai yaar, mera POV: NCERT Biology se Aakash ke kal ke test mein 360 mein se 356 aaye. Sach mein, best notes hain!',
+    name: 'Ankur Bamal',
+    label: 'NEET Aspirant',
+    initials: 'AB',
   },
   {
     quote:
-      'Free Class 11 & 12 notes? Genuinely could not believe this. Yash has put in so much effort for aspirants like us.',
-    name: 'Arjun M.',
-    label: 'Dropper — Batch 2025',
-    initials: 'AM',
+      'POV: NCERT Biology, such a nice notes. Each and every line from NCERT and PYQ, you can also understand this without watching any lectures yet.',
+    name: 'Singh',
+    label: 'NEET Aspirant',
+    initials: 'S',
   },
   {
     quote:
-      'The NEET pack is worth every rupee. The high-yield topics are clearly marked and the explanations are super clear.',
-    name: 'Priya K.',
-    label: 'NEET 2025 Aspirant',
-    initials: 'PK',
+      'POV: NCERT Biology is a gem. I literally hated Morphology and Anatomy NCERT so so so much, I can\'t even explain. The job that should be done by NCERT is done by you.',
+    name: 'Arman',
+    label: 'NEET Aspirant',
+    initials: 'A',
   },
 ]
 
@@ -308,7 +308,7 @@ export default function LandingPage() {
       <section className="py-20 bg-[#f9fbf2]">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#1a2e00] mb-3">What students are saying</h2>
+            <h2 className="text-3xl font-bold text-[#1a2e00] mb-3">What NEET Aspirants Are Saying</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {reviews.map((r) => (
