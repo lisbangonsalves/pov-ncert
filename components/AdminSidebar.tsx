@@ -11,6 +11,7 @@ const navItems = [
   { label: 'Manage Notes', href: '/admin/notes', icon: '📄' },
   { label: 'Manage Students', href: '/admin/students', icon: '👥' },
   { label: 'Promo Codes', href: '/admin/promo', icon: '🏷️' },
+  { label: 'Settings', href: '/admin/settings', icon: '⚙️' },
 ]
 
 export default function AdminSidebar() {

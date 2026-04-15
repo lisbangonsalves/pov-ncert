@@ -27,5 +27,6 @@ declare module 'next-auth/jwt' {
     role?: string
     has_paid?: boolean
     is_blocked?: boolean
+    lastRefreshed?: number
   }
 }

@@ -81,18 +81,34 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         token.role = (user as any).role
         token.has_paid = (user as any).has_paid
         token.is_blocked = (user as any).is_blocked
+        token.lastRefreshed = Date.now()
+        return token
       }
-      if (trigger === 'update' && token.id) {
+
+      // Re-sync with DB every 60 seconds OR on explicit update trigger,
+      // so admin changes (grant/revoke paid, block, delete) propagate quickly.
+      const shouldRefresh =
+        trigger === 'update' ||
+        !token.lastRefreshed ||
+        Date.now() - token.lastRefreshed > 60 * 1000
+
+      if (shouldRefresh && token.id) {
         const { data: dbUser } = await getSupabaseAdmin()
           .from('users')
           .select('has_paid, is_blocked')
           .eq('id', token.id)
           .single()
-        if (dbUser) {
-          token.has_paid = dbUser.has_paid
-          token.is_blocked = dbUser.is_blocked
+
+        if (!dbUser) {
+          // User was deleted — clear the session immediately
+          return null
         }
+
+        token.has_paid = dbUser.has_paid
+        token.is_blocked = dbUser.is_blocked
+        token.lastRefreshed = Date.now()
       }
+
       return token
     },
     async session({ session, token }) {

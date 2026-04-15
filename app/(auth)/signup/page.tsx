@@ -25,11 +25,27 @@ export default function SignupPage() {
       body: JSON.stringify(form),
     })
 
+    const data = await res.json()
     setLoading(false)
 
     if (!res.ok) {
-      const data = await res.json()
       setError(data.error || 'Signup failed')
+      return
+    }
+
+    if (!data.otp_required) {
+      // OTP disabled — account already created, sign in directly
+      const result = await signIn('credentials', {
+        email: form.email,
+        password: form.password,
+        redirect: false,
+        callbackUrl: '/dashboard',
+      })
+      if (result?.error) {
+        setError('Account created! But login failed — please log in manually.')
+        return
+      }
+      router.push('/dashboard')
       return
     }
 
