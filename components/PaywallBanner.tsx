@@ -29,17 +29,17 @@ export default function PaywallBanner() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
             </svg>
           </div>
-          <h3 className="text-xl font-bold text-[#1a2e00] mb-2">Unlock Paid Content</h3>
-          <p className="text-[#3b6d11] text-sm mb-4">
-            Get lifetime access to all paid Biology chapters — written by an MBBS student.
-          </p>
+          <h3 className="text-xl font-bold text-[#1a2e00] mb-1">Unlock Complete Biology Access</h3>
+          <p className="font-semibold text-[#1a2e00] text-sm mb-0.5">POV: NCERT Biology</p>
+          <p className="text-[#3b6d11] text-xs mb-4">Not the NCERT you want, but the NCERT you need!</p>
           <ul className="text-left space-y-2 mb-6">
             {[
-              'All paid Biology chapters',
-              'Chapter-wise PDF notes',
-              'Secure, watermarked viewer',
-              'Lifetime access',
-              'Read on any device',
+              'Chapter-wise Notes for Every Topic',
+              '38 Years of PYQs Included',
+              'Smooth, Secure In-Browser Access',
+              'Access Until You Crack NEET',
+              'All Future Updates Included',
+              'Access Anytime, On Any Device',
             ].map((item) => (
               <li key={item} className="flex items-center gap-2 text-sm text-[#3b6d11]">
                 <span className="text-[#cde182] font-bold">✓</span>
@@ -51,9 +51,8 @@ export default function PaywallBanner() {
             href="/payment"
             className="block w-full bg-[#1a2e00] text-white font-bold py-3 rounded-xl hover:bg-[#3b6d11] transition-colors"
           >
-            Pay Now — Get Access
+            Get Full Access
           </Link>
-          <p className="text-xs text-[#3b6d11] mt-3">One-time payment · Lifetime access</p>
         </div>
       </div>
     </div>

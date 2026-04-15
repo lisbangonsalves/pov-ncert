@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "POV:NCERT — NEET Biology Notes",
+  title: "POV: NCERT by Yash Dhage",
   description:
-    "Chapter-wise NEET Biology notes by an MBBS student. Free for Class 11 & 12. One-time payment for NEET pack.",
+    "This is not the NCERT you want, but the NCERT you need.",
   manifest: "/manifest.json",
   icons: {
     icon: [

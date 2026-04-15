@@ -4,9 +4,8 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
 export const metadata = {
-  title: 'POV:NCERT — NEET Biology Notes by an MBBS Student',
-  description:
-    'Chapter-wise NEET Biology notes written by an MBBS student. Free for Class 11 & 12. One-time payment for NEET pack.',
+  title: 'POV: NCERT by Yash Dhage',
+  description: 'This is not the NCERT you want, but the NCERT you need.',
 }
 
 const features = [

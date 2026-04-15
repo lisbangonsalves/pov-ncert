@@ -155,7 +155,7 @@ export default function PaymentPage() {
           {/* Order Summary */}
           <div className="mb-6">
             <h1 className="text-2xl font-bold text-[#1a2e00] mb-1">Order Summary</h1>
-            <p className="text-sm text-[#3b6d11]">Paid Content — Lifetime Access</p>
+            <p className="text-sm text-[#3b6d11]">Unlock Complete Biology Access</p>
           </div>
 
           <div className="border border-[#d6e8a0] rounded-xl p-4 mb-6 bg-[#f9fbf2]">
@@ -164,18 +164,19 @@ export default function PaymentPage() {
                 <span className="text-[#1a2e00] font-bold">📚</span>
               </div>
               <div>
-                <p className="font-semibold text-[#1a2e00] text-sm">Biology — Paid Content</p>
-                <p className="text-xs text-[#3b6d11]">All paid chapters · Lifetime access</p>
+                <p className="font-semibold text-[#1a2e00] text-sm">POV: NCERT Biology</p>
+                <p className="text-xs text-[#3b6d11]">Complete Class XI &amp; XII</p>
               </div>
             </div>
 
             <ul className="space-y-1.5 mb-4">
               {[
-                'All paid Biology chapters',
-                'Chapter-wise PDF notes',
-                'Secure in-browser viewer',
-                'Lifetime access',
-                'Future updates',
+                'Chapter-wise Notes for Every Topic',
+                '38 Years of PYQs Included',
+                'Smooth, Secure In-Browser Access',
+                'Access Until You Crack NEET',
+                'All Future Updates Included',
+                'Access Anytime, On Any Device',
               ].map((item) => (
                 <li key={item} className="flex items-center gap-2 text-xs text-[#3b6d11]">
                   <span className="text-[#cde182] font-bold">✓</span>
