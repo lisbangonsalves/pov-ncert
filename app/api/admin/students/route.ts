@@ -28,14 +28,18 @@ export async function PATCH(request: NextRequest) {
   const session = await requireAdmin()
   if (!session) return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
 
-  const { id, is_blocked } = await request.json()
-  if (!id || is_blocked === undefined) {
+  const { id, is_blocked, has_paid } = await request.json()
+  if (!id || (is_blocked === undefined && has_paid === undefined)) {
     return NextResponse.json({ error: 'Missing fields' }, { status: 400 })
   }
 
+  const updates: Record<string, boolean> = {}
+  if (is_blocked !== undefined) updates.is_blocked = is_blocked
+  if (has_paid !== undefined) updates.has_paid = has_paid
+
   const { error } = await getSupabaseAdmin()
     .from('users')
-    .update({ is_blocked })
+    .update(updates)
     .eq('id', id)
 
   if (error) return NextResponse.json({ error: error.message }, { status: 500 })
