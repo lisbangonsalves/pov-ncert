@@ -10,6 +10,7 @@ function LoginForm() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const blocked = searchParams.get('blocked')
+  const reset = searchParams.get('reset')
 
   const [form, setForm] = useState({ email: '', password: '' })
   const [error, setError] = useState(blocked ? 'Your account has been suspended. Contact support.' : '')
@@ -52,6 +53,12 @@ function LoginForm() {
       <h1 className="text-2xl font-bold text-[#1a2e00] mb-1">Welcome back</h1>
       <p className="text-sm text-[#3b6d11] mb-6">Log in to access your notes</p>
 
+      {reset && (
+        <div className="bg-green-50 border border-green-200 text-green-700 text-sm rounded-lg px-4 py-3 mb-4">
+          Password updated successfully. Log in with your new password.
+        </div>
+      )}
+
       {error && (
         <div className="bg-red-50 border border-red-200 text-red-700 text-sm rounded-lg px-4 py-3 mb-4">
           {error}
@@ -71,7 +78,12 @@ function LoginForm() {
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-[#1a2e00] mb-1">Password</label>
+          <div className="flex items-center justify-between mb-1">
+            <label className="block text-sm font-medium text-[#1a2e00]">Password</label>
+            <Link href="/forgot-password" className="text-xs text-[#3b6d11] hover:text-[#1a2e00] hover:underline">
+              Forgot password?
+            </Link>
+          </div>
           <input
             type="password"
             required

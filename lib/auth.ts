@@ -25,7 +25,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         const { data: user, error } = await getSupabaseAdmin()
           .from('users')
           .select('*')
-          .eq('email', credentials.email)
+          .eq('email', (credentials.email as string).toLowerCase().trim())
           .single()
 
         if (error || !user) return null
@@ -56,7 +56,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         const { data: user, error } = await getSupabaseAdmin()
           .from('users')
           .select('*')
-          .eq('email', credentials.email)
+          .eq('email', (credentials.email as string).toLowerCase().trim())
           .eq('role', 'admin')
           .single()
 
