@@ -23,7 +23,9 @@ export default function PDFViewerWrapper({ noteId, userEmail }: PDFViewerWrapper
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    const fetchUrl = async () => {
+    let objectUrl: string | null = null
+
+    const fetchPdf = async () => {
       try {
         const res = await fetch(`/api/pdf/${noteId}`)
         if (!res.ok) {
@@ -31,8 +33,10 @@ export default function PDFViewerWrapper({ noteId, userEmail }: PDFViewerWrapper
           setError(data.error || 'Failed to load PDF')
           return
         }
-        const data = await res.json()
-        setPdfUrl(data.url)
+        const blob = await res.blob()
+        if (objectUrl) URL.revokeObjectURL(objectUrl)
+        objectUrl = URL.createObjectURL(blob)
+        setPdfUrl(objectUrl)
       } catch {
         setError('Failed to load PDF')
       } finally {
@@ -40,10 +44,11 @@ export default function PDFViewerWrapper({ noteId, userEmail }: PDFViewerWrapper
       }
     }
 
-    fetchUrl()
-    // Refresh signed URL every 270 seconds (before 300s expiry)
-    const interval = setInterval(fetchUrl, 270000)
-    return () => clearInterval(interval)
+    fetchPdf()
+
+    return () => {
+      if (objectUrl) URL.revokeObjectURL(objectUrl)
+    }
   }, [noteId])
 
   if (loading) {

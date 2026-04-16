@@ -1,9 +1,9 @@
-import { NextRequest, NextResponse } from 'next/server'
+import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { getSupabaseAdmin } from '@/lib/supabase'
 
 export async function GET(
-  request: NextRequest,
+  _request: Request,
   { params }: { params: Promise<{ id: string }> }
 ) {
   const session = await auth()
@@ -34,14 +34,29 @@ export async function GET(
     return NextResponse.json({ error: 'Payment required' }, { status: 402 })
   }
 
-  // Generate signed URL (300 seconds — 5 minutes, to allow for network latency)
+  // Generate a short-lived signed URL (60s) — only used server-side to fetch bytes
   const { data: signedData, error: signedError } = await getSupabaseAdmin().storage
     .from('notes-pdfs')
-    .createSignedUrl(note.storage_path, 300)
+    .createSignedUrl(note.storage_path, 60)
 
   if (signedError || !signedData?.signedUrl) {
     return NextResponse.json({ error: 'Failed to generate URL' }, { status: 500 })
   }
 
-  return NextResponse.json({ url: signedData.signedUrl, title: note.title })
+  // Proxy the PDF bytes — the signed URL never reaches the client
+  const pdfResponse = await fetch(signedData.signedUrl)
+  if (!pdfResponse.ok) {
+    return NextResponse.json({ error: 'Failed to fetch PDF' }, { status: 502 })
+  }
+
+  const pdfBuffer = await pdfResponse.arrayBuffer()
+
+  return new NextResponse(pdfBuffer, {
+    headers: {
+      'Content-Type': 'application/pdf',
+      'Content-Disposition': `inline; filename="${note.title}.pdf"`,
+      'Cache-Control': 'no-store, no-cache, must-revalidate',
+      'X-Content-Type-Options': 'nosniff',
+    },
+  })
 }
