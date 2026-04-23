@@ -18,6 +18,8 @@ export default function PDFViewer({ pdfUrl, email }: PDFViewerProps) {
   const [currentPage, setCurrentPage] = useState(1)
   const [devToolsOpen, setDevToolsOpen] = useState(false)
   const [scale, setScale] = useState(1.0)
+  const [containerWidth, setContainerWidth] = useState(0)
+  const wrapperRef = useRef<HTMLDivElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
 
   // DevTools detection
@@ -61,6 +63,17 @@ export default function PDFViewer({ pdfUrl, email }: PDFViewerProps) {
     }
   }, [])
 
+  // Measure available width for responsive page sizing
+  useEffect(() => {
+    const el = wrapperRef.current
+    if (!el) return
+    const observer = new ResizeObserver(([entry]) => {
+      setContainerWidth(entry.contentRect.width)
+    })
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
   const applyWatermark = useCallback(
     (canvas: HTMLCanvasElement) => {
       drawWatermark(canvas, email)
@@ -92,7 +105,8 @@ export default function PDFViewer({ pdfUrl, email }: PDFViewerProps) {
 
   return (
     <div
-      className="flex flex-col items-center gap-4"
+      ref={wrapperRef}
+      className="flex flex-col items-center gap-4 w-full"
       style={{ userSelect: 'none', WebkitUserDrag: 'none' } as React.CSSProperties}
     >
       {/* Controls */}
@@ -154,7 +168,7 @@ export default function PDFViewer({ pdfUrl, email }: PDFViewerProps) {
         >
           <Page
             pageNumber={currentPage}
-            scale={scale}
+            width={containerWidth ? Math.min(containerWidth, 900) * scale : undefined}
             renderTextLayer={false}
             renderAnnotationLayer={false}
             onRenderSuccess={() => {
