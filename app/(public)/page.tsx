@@ -161,7 +161,7 @@ export default function LandingPage() {
       <section className="max-w-4xl mx-auto px-4 py-20 text-center">
         <div className="inline-flex items-center gap-2 bg-[#e2ecb7] text-[#3b6d11] text-xs font-bold px-3 py-1 rounded-full mb-6">
           <span className="w-2 h-2 rounded-full bg-[#3b6d11] inline-block" />
-          New: NEET 2025 Notes Available
+          New: NEET 2026 Notes Available
         </div>
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#1a2e00] leading-tight mb-5">
           Introducing{' '}
@@ -180,12 +180,6 @@ export default function LandingPage() {
             className="px-8 py-3 bg-[#1a2e00] text-[#cde182] font-bold rounded-xl hover:bg-[#3b6d11] transition-colors text-lg"
           >
             Get Started Free
-          </Link>
-          <Link
-            href="/pricing"
-            className="px-8 py-3 border-2 border-[#3b6d11] text-[#3b6d11] font-bold rounded-xl hover:bg-[#e2ecb7] transition-colors text-lg"
-          >
-            View Pricing
           </Link>
         </div>
 
