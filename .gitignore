@@ -26,6 +26,7 @@
 
 # private docs
 Deploy.md
+upgrade.txt
 
 # debug
 npm-debug.log*
