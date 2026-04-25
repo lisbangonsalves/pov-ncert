@@ -43,23 +43,27 @@ export default function PDFViewer({ pdfUrl, email }: PDFViewerProps) {
     document.addEventListener('keydown', handleKeyDown)
     document.addEventListener('contextmenu', handleContextMenu)
 
-    // Interval-based devtools check via window size
-    const threshold = 160
-    const check = setInterval(() => {
-      if (
-        window.outerWidth - window.innerWidth > threshold ||
-        window.outerHeight - window.innerHeight > threshold
-      ) {
-        setDevToolsOpen(true)
-      } else {
-        setDevToolsOpen(false)
-      }
-    }, 1000)
+    // Window-size devtools check — skip on touch devices (iPads/phones) where
+    // browser chrome legitimately consumes enough space to trigger false positives
+    let check: ReturnType<typeof setInterval> | null = null
+    if (!navigator.maxTouchPoints) {
+      const threshold = 160
+      check = setInterval(() => {
+        if (
+          window.outerWidth - window.innerWidth > threshold ||
+          window.outerHeight - window.innerHeight > threshold
+        ) {
+          setDevToolsOpen(true)
+        } else {
+          setDevToolsOpen(false)
+        }
+      }, 1000)
+    }
 
     return () => {
       document.removeEventListener('keydown', handleKeyDown)
       document.removeEventListener('contextmenu', handleContextMenu)
-      clearInterval(check)
+      if (check) clearInterval(check)
     }
   }, [])
 
